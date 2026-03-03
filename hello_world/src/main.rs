@@ -1,5 +1,13 @@
 fn main() {
-    
+    let celsius_temp=23.0;
+    let fahrenheit_temp=celsius_to_fahrenheit(celsius_temp);
+    assert_eq!(fahrenheit_temp,73.4);
+    println!("Test Passed");
+    /*say_hello();
+    say_hello();
+    let x=1;
+    let y=2;
+    say_the_sum(x, y);*/
     /*let stuff = (10, 3.14, 'x');
     println!("stuff: {}",stuff.0);*/
 
@@ -64,4 +72,19 @@ fn main() {
     //let c = a as f64 /(b+1.0);
     //println!("c is {0:08.3}\na is {1}\nonce again, c is {0}",c,a);
 
+}
+fn say_hello(){
+    println!("Hello");
+    say_a_number(13);
+}
+fn say_a_number(number:i32){
+    println!("Number is {}", number);
+}
+fn say_the_sum(a:u8,b:u8){
+    let sum=a+b;
+    println!("Sum is {}",sum);
+}
+fn celsius_to_fahrenheit(celsius:f64) -> f64{
+    let fahrenheit=(celsius*1.8)+32.0;
+    return fahrenheit;
 }
